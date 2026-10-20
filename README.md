@@ -18,14 +18,15 @@ A telecom retention team wants to understand which customer groups show higher c
 - Customers with 0–12 months of tenure have **47.4%** observed churn.
 
 ## Dashboard
-Open `dashboard.html` in a browser. Click the tabs to compare churn by contract, tenure, and technical support. The dashboard is self-contained.
+![Telecom churn dashboard preview](dashboard-preview.png)
+
+[Open the interactive dashboard](https://nilesh581.github.io/telecom-churn-retention-analysis/dashboard.html). Click the tabs to compare churn by contract, tenure, and technical support. The dashboard is self-contained; the source file is `dashboard.html`.
 
 ## Methods and limitations
-Analysis uses SQL and Python for data preparation and segmentation. These are descriptive associations in a fictional sample; they do not show that contract type, tenure, or support causes churn. The data does not measure the impact of retention interventions.
+The included Python script uses pandas to prepare the data and calculate segment-level churn rates. These are descriptive associations in a fictional sample; they do not show that contract type, tenure, or support causes churn. The data does not measure the impact of retention interventions.
 
 ## Resume bullet
-Analyzed 7,043 IBM sample telecom records using SQL and Python; compared churn across contract, tenure, and support segments and built an interactive dashboard highlighting observed differences, including 42.7% churn for month-to-month versus 2.8% for two-year customers.
+Analyzed 7,043 IBM sample telecom records with Python and pandas; compared churn across contract, tenure, and support segments and built an interactive dashboard highlighting observed differences, including 42.7% churn for month-to-month versus 2.8% for two-year customers.
 
 ## Rebuild the dashboard
-
 Install the dependencies with `python -m pip install pandas openpyxl`, then run `python build_dashboard.py` from this folder. The script reads the included dataset and regenerates `dashboard.html`. (The churn and bank projects only require pandas; openpyxl is needed for the retail Excel dataset.)
